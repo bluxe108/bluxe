@@ -10,7 +10,8 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #5f4b8b, #322f41);
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       display: flex;
       align-items: center;
@@ -18,21 +19,52 @@
       height: 100vh;
       text-align: center;
       flex-direction: column;
+      position: relative;
+      padding: 2rem;
     }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
     h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       color: #f9d342;
     }
+
     p {
-      font-size: 1.2rem;
-      max-width: 400px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    .signature {
+      margin-top: 2rem;
+      font-style: italic;
+      font-size: 1rem;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <h1>🚧 b.luxe</h1>
-  <p>✨ Sitemiz şu anda kurulum aşamasında. Çok yakında sizinle olacağız. Bizi takipte kalın!</p>
+  <div class="content">
+    <h1>✨ b.luxe</h1>
+    <p>Moda yeniden yazılıyor. Ve bu kez başrolde <strong>siz</strong> varsınız.</p>
+    <p><strong>b.luxe</strong>, lüks dokunuşlarla bezenmiş yepyeni bir stil anlayışını sunmak için hazırlanıyor. Önümüzdeki günlerde, giyimin sadece bir ihtiyaç değil, bir <em>ifade biçimi</em> olduğunu birlikte göstereceğiz.</p>
+    <p>Çünkü bizce moda; mevsimlerin değil, karakterin bir yansımasıdır. Kumaşın dokusu, bir yaşam tarzını fısıldar. Kesimler, özgüveni temsil eder. Ve detaylar... her zaman farkı yaratan şey detaylardır.</p>
+    <p><strong>b.luxe</strong>, modayı herkes için erişilebilir lüks haline getirmeye geliyor. Ruhunuza hitap eden parçalarla, stilinize yeni bir sayfa açmaya hazır olun. Klişelerden uzak, vizyoner, zamansız ve kararlı bir stil devrimi başlıyor.</p>
+    <div class="signature">— <em>Restona</em></div>
+  </div>
 </body>
 </html>
-ilk kurulum
